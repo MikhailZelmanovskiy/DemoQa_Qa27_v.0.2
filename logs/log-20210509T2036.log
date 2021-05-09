@@ -1,0 +1,3 @@
+20:37:13 15208 [Test worker] INFO  - Start method -->qucktest
+20:37:13 15238 [Test worker] INFO  - Passed  quick
+20:37:13 15245 [Test worker] INFO  - End of method -->qucktest

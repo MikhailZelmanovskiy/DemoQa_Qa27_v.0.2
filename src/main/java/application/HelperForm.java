@@ -6,6 +6,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class HelperForm extends HelperBase {
     public HelperForm(WebDriver wd) {
@@ -116,4 +120,48 @@ public class HelperForm extends HelperBase {
         wd.findElement(By.id("uploadPicture"))
                 .sendKeys("/Users/tayahatum/QA27/DemoQa_Qa27_v.0.2/girl.jpeg");
     }
+
+
+    private void selectBDay5(String bDay){
+        List<String> date= Arrays.asList(bDay.split(" "));
+
+        click(By.id("dateOfBirthInput"));
+
+        new Select(wd.findElement(By.xpath("//select[@class='react-datepicker__month-select']"))).selectByVisibleText(date.get(1));
+        new Select(wd.findElement(By.xpath("//select[@class='react-datepicker__year-select']"))).selectByVisibleText(date.get(2));
+
+
+        //String locator = "//div[text()='\"+date.get(0)+\"']";
+        String locator = "//div[text()='3']";
+        int a=3;
+        String locator1 = "//div[text()='"+date.get(0)+"']";
+        List<WebElement> ar = wd.findElements(By.xpath(locator));
+
+        for (WebElement el:ar) {
+            if(el.getAttribute("aria-label").contains(date.get(1))){
+                el.click();
+            }
+        }
+    }
+    private void selectBDay6(String bday){
+
+        String [] data=bday.split(" ");
+        click(By.id("dateOfBirthInput"));
+        new Select(wd.findElement(By.xpath("//select[@class='react-datepicker__month-select']"))).selectByVisibleText(data[1]);
+        new Select(wd.findElement(By.xpath("//select[@class='react-datepicker__year-select']"))).selectByVisibleText(data[2]);
+
+        int day= Integer.parseInt(data[0]);
+
+         List<WebElement> list =wd.findElements(By.xpath(String.format("//div[text()='%s']",data[0])));
+
+         WebElement element;
+         if(list.size()>1 && day>15){
+             element=list.get(1);
+         }else {
+             element=list.get(0);
+         }
+
+        element.click();
+    }
+
 }

@@ -32,6 +32,7 @@ public class HelperBase {
         element.click();
         element.clear();
         element.sendKeys(text);
+
     }
 
 

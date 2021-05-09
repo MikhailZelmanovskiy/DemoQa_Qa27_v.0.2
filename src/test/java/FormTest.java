@@ -30,8 +30,9 @@ public class FormTest extends TestBase {
 
       app.form().fillForm(studentForm);
       app.form().savenewStudent();
-        Assert.assertTrue(app.form().isDialogDispleyed());
+        Assert.assertFalse(app.form().isDialogDispleyed());
         app.form().closeDialog();
+        logger.info("Car was created");
     }
 
 
