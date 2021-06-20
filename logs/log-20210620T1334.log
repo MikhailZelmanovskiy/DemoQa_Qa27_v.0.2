@@ -1,0 +1,4 @@
+13:34:12 6290 [Test worker] INFO  - Start method -->dropDragTest
+13:34:12 6644 [Test worker] INFO  - End of method -->dropDragTest
+13:34:32 6368 [Test worker] INFO  - Start method -->fromToWindowsTest
+13:34:32 6623 [Test worker] INFO  - End of method -->fromToWindowsTest

@@ -1,0 +1,8 @@
+14:18:15 4731 [Test worker] INFO  - Start method -->dragMeTest
+14:18:16 5980 [Test worker] INFO  - End of method -->dragMeTest
+14:18:29 4477 [Test worker] INFO  - Start method -->dragAndDropByTest
+14:18:31 6187 [Test worker] INFO  - End of method -->dragAndDropByTest
+14:18:42 4680 [Test worker] INFO  - Start method -->dragAndDropByTest
+14:18:43 6456 [Test worker] INFO  - End of method -->dragAndDropByTest
+14:18:54 4427 [Test worker] INFO  - Start method -->dragAndDropBy100Test
+14:18:58 8146 [Test worker] INFO  - End of method -->dragAndDropBy100Test

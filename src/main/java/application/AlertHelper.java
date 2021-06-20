@@ -9,6 +9,8 @@ public class AlertHelper extends HelperBase{
     }
 
     public void selectItemAlert() {
+        hideFooter();
+        hideADS();
         click(By.xpath("//div/h5[.='Alerts, Frame & Windows']"));
 
     }

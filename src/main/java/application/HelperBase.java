@@ -34,6 +34,9 @@ public class HelperBase {
         element.sendKeys(text);
 
     }
+    public void clickByxPath(String xPathSelector) {
+        wd.findElement(By.xpath(xPathSelector)).click();
+    }
 
 
     public void pause(int millis) {
@@ -49,6 +52,10 @@ public class HelperBase {
     }
 
     public void hideFooter(){
+        JavascriptExecutor js = (JavascriptExecutor) wd;
+        js.executeScript("document.querySelector('footer').style.display='none';");
+    }
+    public void hideADS(){
         JavascriptExecutor js = (JavascriptExecutor) wd;
         js.executeScript("document.querySelector('footer').style.display='none';");
     }

@@ -11,7 +11,7 @@ public class AlertTest extends TestBase{
 
     @Test
     public void alertTest(){
-        app.alert().pause(3000);
+        app.alert().pause(2000);
 
     }
 }
