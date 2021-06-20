@@ -30,7 +30,7 @@ public class ApplicationManager {
         }
         wd.manage().window().maximize();
         wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        wd.navigate().to("https://demoqa.com/");
+        wd.navigate().to("https://demoqa.com/alertsWindows");
         studentForm = new HelperForm(wd);
         alert= new AlertHelper(wd);
         windows =new WindowsHelper(wd);
