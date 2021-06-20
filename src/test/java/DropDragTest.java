@@ -8,6 +8,7 @@ public class DropDragTest extends TestBase{
         app.dropDrag().selectItemInteractions();
     }
 
+
     @Test
     public void dragMeTest(){
         app.dropDrag().selectDroppable();
